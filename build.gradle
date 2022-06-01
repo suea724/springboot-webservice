@@ -21,7 +21,6 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 dependencies {
@@ -29,6 +28,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
     // gradle 버전 업데이트 되면서 compile, testcompile 대신 implementation,testimplementation 사용해야 한대요!
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.projectlombok:lombok')
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
 
