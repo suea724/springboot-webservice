@@ -30,4 +30,10 @@ public class Posts {
         this.content = content;
         this.author = author;
     }
+
+    // 직접적으로 수정 쿼리 날림
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
