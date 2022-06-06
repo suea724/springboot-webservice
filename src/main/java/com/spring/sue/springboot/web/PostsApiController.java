@@ -18,7 +18,7 @@ public class PostsApiController {
         return postsService.save(postsSaveRequestDto);
     }
 
-    @PutMapping("/api/v1/posts/{id}")
+    @PutMapping("/api/v1/posts/{id}") // 넘어온 데이터를 DTO로 받아 update 수행
     public Long update(@PathVariable Long id, @RequestBody PostsUpdateRequestDto postsUpdateRequestDto) {
         return postsService.update(id, postsUpdateRequestDto);
     }
