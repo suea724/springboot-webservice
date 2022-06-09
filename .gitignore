@@ -16,6 +16,7 @@ spring-test/test-output/
 argfile*
 pom.xml
 activemq-data/
+application-oauth.properties
 
 classes/
 /build
