@@ -1,5 +1,6 @@
 package com.spring.sue.springboot.web;
 
+import com.spring.sue.springboot.config.auth.LoginUser;
 import com.spring.sue.springboot.config.auth.dto.SessionUser;
 import com.spring.sue.springboot.service.post.PostsService;
 import com.spring.sue.springboot.web.dto.PostsResponseDto;
@@ -19,12 +20,12 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         // Model에 게시글 조회 결과 전달
         model.addAttribute("posts", postsService.findAllDesc());
 
         // 로그인 성공 시 저장된 세션으로부터 userName 가져와서 Model에 전달
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        // SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
