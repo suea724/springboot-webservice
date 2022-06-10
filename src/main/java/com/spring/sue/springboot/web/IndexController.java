@@ -27,7 +27,7 @@ public class IndexController {
         // 로그인 성공 시 저장된 세션으로부터 userName 가져와서 Model에 전달
         // SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if (user != null) {
-            model.addAttribute("userName", user.getName());
+            model.addAttribute("loginUserName", user.getName());
         }
         return "index";
     }
