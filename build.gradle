@@ -16,7 +16,12 @@ repositories {
 dependencies {
     // gradle 버전 업데이트: compile, testcompile > implementation,testimplementation 사용
     implementation('org.springframework.boot:spring-boot-starter-web')
-    implementation('org.projectlombok:lombok')
+
+    compileOnly('org.projectlombok:lombok')
+    annotationProcessor('org.projectlombok:lombok')
+    testCompileOnly('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
+
     implementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('com.h2database:h2')
